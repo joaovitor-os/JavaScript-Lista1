@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercicio 1</title>
+    <meta charset="UTF-8">
+
+    <script>
+        var altura = [1.70, 1.75, 1.80, 1.85, 1.50, 1.55, 1.60, 1.65, 1.70, 1.75, 1.80, 1.85, 1.90, 1.95, 2.00];
+        var genero = ["Masculino", "Feminino", "Masculino", "Feminino", "Masculino", "Feminino", "Masculino", "Feminino", "Masculino", "Feminino", "Masculino", "Feminino", "Masculino", "Feminino", "Masculino"];
+
+
+        function alturaMaior(altura) {
+            var maiorAltura = altura[0];
+            for (let i = 0; i < altura.length; i++) {
+                if (altura[i] > maiorAltura) {
+                    maiorAltura = altura[i];
+                }
+            }
+            return maiorAltura;
+        }
+
+        function alturaMenor(altura) {
+            var menorAltura = altura[0];
+            for (let i = 0; i < altura.length; i++) {
+                if (altura[i] < menorAltura[i]) {
+                    menor = altura[i];
+                }
+            }
+            return menorAltura;
+        }
+
+        function mediaMulheres(genero, altura) {
+            var soma = 0;
+            var media = 0;
+            for (let i = 0; i < genero.length; i++) {
+                if (genero[i] === "Feminino") {
+                    soma += altura[i];
+                    media++;
+                }
+            }
+            return (soma / media);
+        }
+
+        function qtdeHomens(genero) {
+            var homens = 0;
+            for (let i = 0; i < genero.length; i++) {
+                if (genero[i] === "Masculino") {
+                    homens++;
+                }
+            }
+            return homens;
+        }
+
+        alert("Maior Altura" + alturaMaior(altura) + " Metros.");
+        alert("Menor Altura" + alturaMenor(altura) + " Metros.");
+        alert("Média de Altura das Mulheres" + mediaMulheres(genero, altura).toFixed(2) + " Metros.");
+        alert("Quantidade é de" + qtdeHomens(genero) + " Homens.");
+    </script>
+
+</head>
+
+<body style="background-color: rgb(161, 207, 238); text-align: center; color: rgb(33, 157, 240);">
+    <a href="index.html" >Voltar </a><br>
+</body>
+
+</html>
